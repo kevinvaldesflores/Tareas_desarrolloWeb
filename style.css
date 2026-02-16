@@ -1,0 +1,310 @@
+/* ESTILOS BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 2.0;
+    color: #ffffff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container span{
+    color:#d00
+}
+/* HEADER */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(75, 74, 74);
+}
+
+.header-content {
+    justify-content: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+   width: 100%;
+   margin-bottom: 40px;
+}
+
+.logo-img{
+    padding-right: 3000px;
+    max-height: 60px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+.logo-footer{
+    max-height: 60px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+nav a:hover, .active {
+    color: #d00;
+}
+
+/* HISTORIAS */
+.history {
+    text-align: center;
+    padding: 80px 20px;
+    background: #000;
+}
+.history-btn {
+    display: inline-block;
+    background-color: rgb(214, 6, 169);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    
+}
+.history-btn:hover {
+    background-color: #8d05a8;
+}
+
+.history h1 {
+    padding-top: 100px;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.history p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: rgb(156, 156, 156);
+}
+
+
+/* MISION */
+.mission {
+    padding: 60px 20px;
+    background-color: #000;
+}
+
+.mission h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.mission-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: rgb(156, 156, 156);
+}
+
+.frase {
+    background-color: rgb(31, 29, 29);
+    padding: 25px;
+    border-radius: 30px;
+    margin: 10px 200px;
+
+}
+
+
+blockfrase {
+    font-size: 28px;
+    font-weight: 300;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.frase-autor {
+    font-size: 16px;
+    color: rgb(156, 156, 156);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.4;
+    margin: 0 auto 30px;
+    max-width: 700px;
+    padding-top: 20px
+}
+
+/* VALORES */
+.values {
+    padding: 100px 20px;
+    background-color: #000;
+}
+
+.values h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background-color: rgb(31, 29, 29);
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.value-card p {
+    color: rgb(156, 156, 156);
+    font-size: 16px;
+}
+
+.logo-circular {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  }
+  
+  .logo-circular i {
+    font-size: 60px;
+    color: white;
+  }
+
+/* COLABORACION */
+.collaboration {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #000;
+}
+
+.collaboration h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.collaboration p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: rgb(156, 156, 156);
+}
+
+.collaboration-btn {
+    display: inline-block;
+    background-color: #d00;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.collaboration-btn:hover {
+    background-color: #b30000;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    padding: 60px 20px 30px;
+}
+
+.footer-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-tagline {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+    font-weight: 300;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #777;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+}
+
+/*  LETRAS */
+@media (max-width: 768px) {  
+    blockfrase {
+        font-size: 22px;
+    }
+}
+
+
+  
