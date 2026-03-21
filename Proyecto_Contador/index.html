@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador con Contador de Clics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Principal">
+        <h1> CONTADOR </h1>
+        <div class="contador-principal">
+            <h2>Valor actual:</h2>
+            <div class="numero" id="valorActual">0</div>
+        </div>
+        
+        <div class="botones">
+            <button id="btnIncrementar" class="btn"> + INCREMENTAR</button>
+            <button id="btnDecrementar" class="btn"> - DECREMENTAR</button>
+        </div>
+        
+        <div class="contadores-secundarios">
+            <div class="contador-box">
+                <h3>Clics en  INCREMENTAR</h3>
+
+                <div class="contador" id="contadorInc">0</div>
+                <div class="limite">(Se reinicia en 10)</div>
+            </div>
+            
+            <div class="contador-box">
+                <h3>Clics en DECREMENTAR</h3>
+                <div class="contador" id="contadorDec">0</div>
+                <div class="limite">(Se reinicia en 10)</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
