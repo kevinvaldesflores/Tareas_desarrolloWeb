@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: linear-gradient(145deg, #e9f0fc 0%, #d9e3f0 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* Tarjeta principal */
+.card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(0px);
+    border-radius: 2rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 540px;
+    padding: 2rem 2rem 2.2rem;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1a2a3f, #2c3e66);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+}
+
+.sub {
+    color: #4a627a;
+    border-left: 3px solid #3b82f6;
+    padding-left: 0.85rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    font-weight: 450;
+}
+
+/* Grupo del campo */
+.input-group {
+    margin-bottom: 1.8rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #1e2f44;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    letter-spacing: -0.2px;
+}
+
+.campo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #cfdfed;
+    border-radius: 1.2rem;
+    outline: none;
+    background-color: white;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+    font-family: 'Segoe UI', monospace;
+    font-weight: 500;
+    color: #0b2b3b;
+}
+
+input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59,130,246,0.2);
+}
+
+/* Estados visuales  */
+input.valid {
+    border-color: #10b981;
+    background-color: #f0fdf9;
+    padding-right: 2.8rem;
+}
+
+input.invalid {
+    border-color: #ef4444;
+    background-color: #fef6f6;
+    padding-right: 2.8rem;
+}
+
+/* Iconos de feedback  */
+.campo-wrapper::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+input.valid + .campo-wrapper::after,
+.campo-wrapper:has(input.valid)::after {
+    content: "✓";
+    color: #10b981;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+input.invalid + .campo-wrapper::after,
+.campo-wrapper:has(input.invalid)::after {
+    content: "✗";
+    color: #ef4444;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Mensajes de retroalimentación */
+.feedback-message {
+    min-height: 4rem;
+    margin-top: 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+    background-color: #f8fafd;
+}
+
+.error-msg {
+    color: #b91c1c;
+    background-color: #fee9e9;
+    border-left: 4px solid #ef4444;
+    padding: 0.6rem 0.9rem;
+    border-radius: 1rem;
+}
+
+.success-msg {
+    color: #0a6e3f;
+    background-color: #e3f9ef;
+    border-left: 4px solid #10b981;
+    padding: 0.6rem 0.9rem;
+    border-radius: 1rem;
+}
+
+.neutral-msg {
+    color: #4b6b8f;
+    background-color: #f1f5f9;
+    border-left: 4px solid #94a3b8;
+    padding: 0.6rem 0.9rem;
+    border-radius: 1rem;
+    font-style: italic;
+}
+
+/* Detalle técnico de la regex */
+.regex-info {
+    background: #f0f4fa;
+    border-radius: 1rem;
+    padding: 0.9rem 1rem;
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: #2c4c6e;
+    border: 1px solid #dce7f2;
+}
+
+.regex-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.regex-badge {
+    background: #2c3e66;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-family: monospace;
+    font-size: 0.7rem;
+}
+
+footer {
+    margin-top: 1.2rem;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #6c86a3;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    input {
+        padding: 0.8rem 0.9rem;
+    }
+}

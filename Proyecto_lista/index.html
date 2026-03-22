@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Tabla Dinámica: CRUD, Ordenar y Filtrar | JS Vanilla</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="dashboard">
+    <div class="header-section">
+        <h1>📋 Gestor Interactivo</h1>
+        <div class="badge-count" id="itemsCountDisplay">0 elementos</div>
+    </div>
+
+    <!-- FORMULARIO: añadir / edición -->
+    <div class="form-card">
+        <div class="form-title">
+            <span>✏️</span> <span id="formModeLabel">Agregar nuevo elemento</span>
+        </div>
+        <div class="form-grid">
+            <div class="input-group">
+                <label>Nombre del elemento</label>
+                <input type="text" id="itemName" placeholder="Nombre" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <label>Categoría</label>
+                <input type="text" id="itemCategory" placeholder="Categoría">
+            </div>
+            <div class="input-group">
+                <label>Año de lanzamiento</label>
+                <input type="number" id="itemYear" placeholder="Año de lanzamiento" step="1" min="1900" max="2099">
+            </div>
+            <div class="btn-group">
+                <button id="btnAddOrUpdate" class="primary">➕ Añadir / Actualizar</button>
+                <button id="btnCancelEdit" class="reset-btn">✖ Cancelar edición</button>
+            </div>
+        </div>
+        <small style="display:block; margin-top: 0.8rem; color:#4b6e7e;">💡 Completa los campos y presiona "Añadir". Para editar, haz clic en "Editar" en la tabla.</small>
+    </div>
+
+    <!-- Barra de filtros y orden visual -->
+    <div class="toolbar">
+        <div class="filter-area">
+            <span>🔍 Filtrar por:</span>
+            <input type="text" id="filterName" placeholder="Nombre..." style="width:150px;">
+            <input type="text" id="filterCategory" placeholder="Categoría..." style="width:150px;">
+            <input type="text" id="filterYear" placeholder="Año..." style="width:100px;">
+            <button id="clearFiltersBtn" class="reset-btn">🗑 Limpiar filtros</button>
+        </div>
+        <div>
+            <span style="font-size:0.8rem; margin-right:6px;">📌 Ordenar columna</span>
+        </div>
+    </div>
+
+    <!-- TABLA PRINCIPAL -->
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th data-field="name">📛 Nombre <span class="sort-indicator"></span></th>
+                    <th data-field="category">📂 Categoría <span class="sort-indicator"></span></th>
+                    <th data-field="year">📅 Año <span class="sort-indicator"></span></th>
+                    <th>⚙️ Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- filas dinámicas -->
+                <tr class="empty-row"><td colspan="4">Cargando datos o sin elementos...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>✨ Ordena haciendo clic en el encabezado | Edita o elimina cada fila | Filtrado en tiempo real</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
